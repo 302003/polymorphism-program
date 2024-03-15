@@ -1,0 +1,102 @@
+Develop a C# program to create a class named shape. Create three sub classes namely: circle, triangle and  square, each class has two member functions named draw () and erase (). Demonstrate polymorphism  concepts by developing suitable methods, defining member data and main program.
+
+
+
+using System;
+
+// Base class Shape
+class Shape
+{
+    // Method to draw a shape
+    public virtual void Draw()
+    {
+        Console.WriteLine("Drawing a shape");
+    }
+
+    // Method to erase a shape
+    public virtual void Erase()
+    {
+        Console.WriteLine("Erasing a shape");
+    }
+}
+
+// Derived class Circle
+class Circle : Shape
+{
+    // Method to draw a circle
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a circle");
+    }
+
+    // Method to erase a circle
+    public override void Erase()
+    {
+        Console.WriteLine("Erasing a circle");
+    }
+}
+
+// Derived class Triangle
+class Triangle : Shape
+{
+    // Method to draw a triangle
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a triangle");
+    }
+
+    // Method to erase a triangle
+    public override void Erase()
+    {
+        Console.WriteLine("Erasing a triangle");
+    }
+}
+
+// Derived class Square
+class Square : Shape
+{
+    // Method to draw a square
+    public override void Draw()
+    {
+        Console.WriteLine("Drawing a square");
+    }
+
+    // Method to erase a square
+    public override void Erase()
+    {
+        Console.WriteLine("Erasing a square");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Creating objects of different shapes
+        Shape[] shapes = new Shape[3];
+        shapes[0] = new Circle();
+        shapes[1] = new Triangle();
+        shapes[2] = new Square();
+
+        // Demonstrate polymorphism by calling Draw and Erase methods
+        foreach (Shape shape in shapes)
+        {
+            shape.Draw();
+            shape.Erase();
+            Console.WriteLine(); // Adding a newline for separation
+        }
+    }
+}
+
+
+
+Output:
+
+Drawing a circle
+Erasing a circle
+
+Drawing a triangle
+Erasing a triangle
+
+Drawing a square
+Erasing a square
